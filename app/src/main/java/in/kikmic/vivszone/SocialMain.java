@@ -1,6 +1,8 @@
 package in.kikmic.vivszone;
 
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -12,6 +14,7 @@ import android.widget.Toast;
 import com.parse.ParseUser;
 
 public class SocialMain extends AppCompatActivity {
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -46,4 +49,6 @@ public class SocialMain extends AppCompatActivity {
             }
         });
     }
+
+
 }

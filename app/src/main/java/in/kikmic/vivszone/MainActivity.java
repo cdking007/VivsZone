@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -32,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
 
     private Button btnLogIn,btnSignUp;
     private TextView edtPassword,edtUserName;
+    private ImageView imgLogo;
 
 
     @Override
@@ -46,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
         btnSignUp = findViewById(R.id.btnSignUp);
         edtPassword = findViewById(R.id.edtPassword);
         edtUserName = findViewById(R.id.edtUserName);
+        imgLogo = findViewById(R.id.imgLogo);
         if (ParseUser.getCurrentUser() !=null){
             IntentIsCalled();
         }
@@ -80,7 +83,10 @@ public class MainActivity extends AppCompatActivity {
                         if (user != null && e == null){
 
                             Toast.makeText(MainActivity.this,"Login Sucess",Toast.LENGTH_SHORT).show();
-                            IntentIsCalled();
+                            imgLogo.animate().rotationX(150).setDuration(2000).start();
+
+                                IntentIsCalled();
+
 
                         }
                         else {
