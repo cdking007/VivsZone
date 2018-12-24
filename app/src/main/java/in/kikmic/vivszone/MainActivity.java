@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
 
     private Button btnLogIn,btnSignUp;
     private TextView edtPassword,edtUserName;
-    private ImageView imgLogo;
+
 
 
     @Override
@@ -48,9 +48,10 @@ public class MainActivity extends AppCompatActivity {
         btnSignUp = findViewById(R.id.btnSignUp);
         edtPassword = findViewById(R.id.edtPassword);
         edtUserName = findViewById(R.id.edtUserName);
-        imgLogo = findViewById(R.id.imgLogo);
+
         if (ParseUser.getCurrentUser() !=null){
             IntentIsCalled();
+            finish();
         }
 
         edtPassword.setOnKeyListener(new View.OnKeyListener() {
@@ -83,9 +84,8 @@ public class MainActivity extends AppCompatActivity {
                         if (user != null && e == null){
 
                             Toast.makeText(MainActivity.this,"Login Sucess",Toast.LENGTH_SHORT).show();
-                            imgLogo.animate().rotationX(150).setDuration(2000).start();
-
                                 IntentIsCalled();
+                                finish();
 
 
                         }

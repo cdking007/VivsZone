@@ -1,5 +1,6 @@
 package in.kikmic.vivszone;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v7.app.AlertDialog;
@@ -14,7 +15,28 @@ import android.widget.Toast;
 import com.parse.ParseUser;
 
 public class SocialMain extends AppCompatActivity {
+    @Override
+    public void onBackPressed() {
+        AlertDialog.Builder alrtBox = new AlertDialog.Builder(this);
+        alrtBox.setMessage("Are You Sure?");
+        alrtBox.setCancelable(true);
+        alrtBox.setNegativeButton("yes", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                SocialMain.super.onBackPressed();
+            }
+        });
+        alrtBox.setPositiveButton("Cancel", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                dialogInterface.cancel();
+            }
+        });
+        AlertDialog aleart = alrtBox.create();
+        aleart.show();
 
+
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
