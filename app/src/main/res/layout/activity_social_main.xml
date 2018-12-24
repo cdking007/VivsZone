@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SocialMain"
-    android:onClick="rtisClicked">
+    tools:context=".SocialMain">
 
     <Button
         android:id="@+id/btnLogOut"

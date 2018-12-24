@@ -65,6 +65,8 @@ public class SocialMain extends AppCompatActivity {
                 }
                 else {
                     ParseUser.logOutInBackground();
+                    Intent intent = new Intent(SocialMain.this,MainActivity.class);
+                    startActivity(intent);
                     finish();
 
                 }
