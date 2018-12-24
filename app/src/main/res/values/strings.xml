@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">KikMic</string>
+    <string name="back4app_server_url">https://parseapi.back4app.com/</string>
+
+    <!-- Change the following strings as required -->
+    <string name="back4app_app_id">c81QWodMACr4lqmILfXkvm3IeHUR2b7Qk4z8qOLo</string>
+    <string name="back4app_client_key">0tzXl9q8gCojS4MXJNSZjAdoc6YOdKwquRDvsffZ</string>
+
+</resources>
